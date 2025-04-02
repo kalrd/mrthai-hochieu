@@ -19,6 +19,20 @@
     .tracuu button { padding: 12px 20px; font-size: 16px; background-color: #0077cc; color: white; border: none; border-radius: 5px; cursor: pointer; }
     .map { margin-top: 24px; }
     iframe { width: 100%; height: 280px; border: none; border-radius: 8px; }
+    /* Nút gọi và Zalo cố định */
+    .floating-button {
+      position: fixed;
+      right: 20px;
+      padding: 12px 16px;
+      border-radius: 50px;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      z-index: 999;
+      text-decoration: none;
+    }
+    .call-btn { bottom: 80px; background: #28a745; }
+    .zalo-btn { bottom: 20px; background: #0084ff; }
   </style>
 </head>
 <body>
@@ -78,5 +92,9 @@
       <iframe src="https://www.google.com/maps?q=B4+Ph%E1%BA%A1m+Ng%E1%BB%8Dc+Th%E1%BA%A1ch,+Kim+Li%C3%AAn,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i&output=embed"></iframe>
     </div>
   </div>
+
+  <!-- Nút gọi và Zalo cố định -->
+  <a class="floating-button call-btn" href="tel:0828859889">📞 Gọi ngay</a>
+  <a class="floating-button zalo-btn" href="https://zalo.me/0828859889" target="_blank">💬 Chat Zalo</a>
 </body>
 </html>
