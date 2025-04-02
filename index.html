@@ -7,6 +7,7 @@
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
     .header { background: #0077cc; color: white; padding: 16px; text-align: center; }
+    .contact-info { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: #ffeb3b; color: #333; padding: 10px; text-align: center; font-size: 16px; }
     .section { padding: 16px; max-width: 100%; margin: auto; background: white; margin-top: 16px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
     h1 { font-size: 20px; }
     h2 { font-size: 18px; color: #0077cc; margin-top: 16px; }
@@ -19,39 +20,24 @@
     .tracuu button { padding: 12px 20px; font-size: 16px; background-color: #0077cc; color: white; border: none; border-radius: 5px; cursor: pointer; }
     .map { margin-top: 24px; }
     iframe { width: 100%; height: 280px; border: none; border-radius: 8px; }
-    /* Nút gọi và Zalo cố định */
-    .floating-button {
-      position: fixed;
-      right: 20px;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      color: white;
-      font-weight: bold;
-      font-size: 24px;
-      z-index: 999;
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
+    .floating-button { position: fixed; right: 20px; width: 56px; height: 56px; border-radius: 50%; color: white; font-weight: bold; font-size: 24px; z-index: 999; text-decoration: none; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 6px rgba(0,0,0,0.3); }
     .call-btn { bottom: 90px; background: #28a745; }
     .zalo-btn { bottom: 20px; background: #0084ff; }
-  </style><style>
-@keyframes shake {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-15deg); }
-  50% { transform: rotate(15deg); }
-  75% { transform: rotate(-15deg); }
-}
-.floating-button:hover {
-  animation: shake 0.5s infinite;
-}
-</style>
+    @keyframes shake {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-15deg); }
+      50% { transform: rotate(15deg); }
+      75% { transform: rotate(-15deg); }
+    }
+    .floating-button:hover { animation: shake 0.5s infinite; }
+  </style>
 </head>
 <body>
-  <div class="header">
+  <div class="contact-info">
+    📞 <strong>0828 859 889</strong> | 📍 B4 Phạm Ngọc Thạch, Kim Liên, Đống Đa, Hà Nội | ✉️ hochieunhanh@gmail.com
+  </div>
+
+  <div class="header" style="padding-top:70px;">
     <h1>MR THÁI - DỊCH VỤ LÀM HỘ CHIẾU NHANH</h1>
   </div>
 
@@ -74,26 +60,6 @@
       <li>Địa chỉ nhận kết quả</li>
     </ul>
 
-    <div class="contact">
-      <h2>📞 Liên hệ:</h2>
-      <p><strong>0828 859 889</strong> (Zalo/Call)</p>
-      <p>Email: hochieunhanh@gmail.com</p>
-      <p>Địa chỉ: B4 Phạm Ngọc Thạch, Kim Liên, Đống Đa, Hà Nội</p>
-    </div>
-
-    <h2>📬 Đăng ký tư vấn</h2>
-    <form class="form">
-      <input type="text" placeholder="Họ tên">
-      <input type="tel" placeholder="Số điện thoại">
-      <select>
-        <option value="">Chọn nhu cầu</option>
-        <option value="moi">Làm hộ chiếu mới</option>
-        <option value="giahan">Gia hạn hộ chiếu</option>
-        <option value="captoc">Làm hộ chiếu cấp tốc</option>
-      </select>
-      <button type="submit">GỬI THÔNG TIN</button>
-    </form>
-
     <div class="tracuu">
       <h2>🔍 Tra cứu hồ sơ</h2>
       <p>Tra cứu tình trạng tại cổng thông tin Bộ Công An.</p>
@@ -108,10 +74,9 @@
     </div>
   </div>
 
-  <!-- Nút gọi và Zalo cố định hình tròn -->
-<a class="floating-button call-btn" href="tel:0828859889">📞</a>
-  <a class="floating-button zalo-btn" href="https://zalo.me/0828859889" target="_blank"><<a class="floating-button zalo-btn" href="https://zalo.me/0828859889" target="_blank">
-  <img src="https://i.ibb.co/Ps9bp15p/Icon-of-Zalo-svg.webp" alt="Zalo" style="width:36px;height:36px;">
-</a>></a>
+  <a class="floating-button call-btn" href="tel:0828859889">📞</a>
+  <a class="floating-button zalo-btn" href="https://zalo.me/0828859889" target="_blank">
+    <img src="https://i.ibb.co/Ps9bp15p/Icon-of-Zalo-svg.webp" alt="Zalo" style="width:36px;height:36px;">
+  </a>
 </body>
 </html>
