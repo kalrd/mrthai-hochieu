@@ -23,17 +23,32 @@
     .floating-button {
       position: fixed;
       right: 20px;
-      padding: 12px 16px;
-      border-radius: 50px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
       color: white;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 24px;
       z-index: 999;
       text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     }
-    .call-btn { bottom: 80px; background: #28a745; }
+    .call-btn { bottom: 90px; background: #28a745; }
     .zalo-btn { bottom: 20px; background: #0084ff; }
-  </style>
+  </style><style>
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  50% { transform: rotate(15deg); }
+  75% { transform: rotate(-15deg); }
+}
+.floating-button:hover {
+  animation: shake 0.5s infinite;
+}
+</style>
 </head>
 <body>
   <div class="header">
@@ -93,9 +108,10 @@
     </div>
   </div>
 
-    <a class="floating-button call-btn" href="tel:0828859889">📞</a>
-  <a class="floating-button zalo-btn" href="https://zalo.me/0828859889" target="_blank">
+  <!-- Nút gọi và Zalo cố định hình tròn -->
+<a class="floating-button call-btn" href="tel:0828859889">📞</a>
+  <a class="floating-button zalo-btn" href="https://zalo.me/0828859889" target="_blank"><<a class="floating-button zalo-btn" href="https://zalo.me/0828859889" target="_blank">
   <img src="https://i.ibb.co/Ps9bp15p/Icon-of-Zalo-svg.webp" alt="Zalo" style="width:36px;height:36px;">
-</a>
+</a>></a>
 </body>
 </html>
