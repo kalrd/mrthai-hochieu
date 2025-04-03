@@ -6,7 +6,7 @@
   <title>Mr Thái - Dịch vụ làm hộ chiếu nhanh</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-    .header { background: #0077cc; color: white; padding: 16px; text-align: center; }
+    .header { background: #0077cc; color: white; padding: 16px; text-align: center; padding-top:20px; }
     .contact-info { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: #ffeb3b; color: #333; padding: 10px; text-align: center; font-size: 16px; }
     .section { padding: 16px; max-width: 100%; margin: auto; background: white; margin-top: 16px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
     h1 { font-size: 20px; }
@@ -30,35 +30,191 @@
       75% { transform: rotate(-15deg); }
     }
     .floating-button:hover { animation: shake 0.5s infinite; }
-  </style>
+    .contact-banner {
+      background: #0077cc;
+      color: white;
+      padding: 12px;
+      text-align: center;
+      font-size: 16px;
+    }
+    .widget-process {
+      background: #fff8e1;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.05);
+    }
+    .widget-process h2 {
+      color: #d17b00;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+    .widget-process ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .widget-process li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .feedback-section {
+      background: #f1f9ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 24px;
+    }
+    .feedback-section h2 {
+      color: #0077cc;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .feedback {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .feedback img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 12px;
+      object-fit: cover;
+    }
+    .feedback p {
+      margin: 0;
+      font-size: 15px;
+    }
+    .feedback-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 12px;
+      padding: 12px 0;
+    }
+    .feedback-slider img {
+      width: 240px;
+      height: auto;
+      border-radius: 8px;
+      scroll-snap-align: start;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .faq-section {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 32px;
+    }
+    .faq-section h2 {
+      color: #0077cc;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .faq-item {
+      margin-bottom: 12px;
+    }
+    .faq-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px;
+    }
+    .faq-item p {
+      margin: 0;
+      font-size: 15px;
+      color: #444;
+    }
+    .contact-now {
+      background: #e1f5fe;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-top: 32px;
+    }
+    .contact-now h2 {
+      color: #0077cc;
+      margin-bottom: 12px;
+    }
+    .contact-now p {
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+    .contact-btn {
+      display: inline-block;
+      margin: 6px 10px;
+      padding: 10px 16px;
+      background: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    .contact-btn.zalo {
+      background: #0084ff;
+    }
+  html {
+  scroll-behavior: smooth;
+}
+
+.section, .widget-process, .feedback-section, .faq-section, .contact-now, .map {
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section:hover, .widget-process:hover, .feedback-section:hover, .faq-section:hover, .contact-now:hover, .map:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+</style>
 </head>
 <body>
+  <div class="contact-banner">
+    📞 <strong>0828 859 889</strong> | 📍 B4 Phạm Ngọc Thạch, Kim Liên, Đống Đa, Hà Nội | ✉️ hochieunhanh@gmail.com
+  </div>
   <div class="contact-info">
     📞 <strong>0828 859 889</strong> | 📍 B4 Phạm Ngọc Thạch, Kim Liên, Đống Đa, Hà Nội | ✉️ hochieunhanh@gmail.com
   </div>
+  <div class="header">
+    <h1 style="margin: 0 auto; max-width: 90%; line-height: 1.4; font-size: 26px; padding-top: 0;">MR THÁI - DỊCH VỤ LÀM HỘ CHIẾU NHANH</h1>
+  </div>
+  <div class="contact-now">
+    <h2>📞 Liên hệ ngay</h2>
+    <p>Nếu bạn cần tư vấn hoặc hỗ trợ làm hộ chiếu nhanh, đừng ngần ngại gọi hoặc nhắn Zalo cho Mr Thái!</p>
+    <a href="tel:0828859889" class="contact-btn">📞 Gọi: 0828 859 889</a>
+    <a href="https://zalo.me/0828859889" target="_blank" class="contact-btn zalo">💬 Nhắn Zalo</a>
+  </div>
 
-  <div class="header" style="padding-top:70px;">
-    <h1>MR THÁI - DỊCH VỤ LÀM HỘ CHIẾU NHANH</h1>
+  <div class="section widget-process">
+    <h2>📋 Quy trình làm hộ chiếu đơn giản</h2>
+    <ul>
+      <li><strong>⏱ Không cần đặt lịch trước:</strong> Chỉ cần đi trong giờ hành chính (08h00–11h00 & 13h30–16h30)</li>
+      <li><strong>⚡ Thời gian xử lý nhanh:</strong> Mất khoảng 5–10 phút làm thủ tục</li>
+      <li><strong>🪪 Hồ sơ đơn giản:</strong> Chỉ cần CCCD và tài khoản định danh điện tử</li>
+      <li><strong>✅ Mr Thái lo từ A–Z:</strong> Anh/chị không cần làm gì thêm</li>
+    </ul>
   </div>
 
   <div class="section">
-    <h2>✔ Cần làm hộ chiếu gấp?</h2>
-    <p><strong>Mr Thái</strong> hỗ trợ làm hộ chiếu trọn gói, nhanh chóng, tiết kiệm thời gian cho bạn – không phải xếp hàng chờ đợi!</p>
-
-    <h2>🛠 Quy trình:</h2>
-    <ul>
-      <li>Tư vấn qua điện thoại/Zalo</li>
-      <li>Gửi hồ sơ online</li>
-      <li>Xử lý trong 3–5 ngày hoặc cấp tốc 24–48h</li>
-      <li>Giao nhận tận nơi</li>
-    </ul>
-
     <h2>📄 Hồ sơ cần có:</h2>
     <ul>
       <li>CMND/CCCD gốc</li>
       <li>2 ảnh 4x6 nền trắng</li>
       <li>Địa chỉ nhận kết quả</li>
     </ul>
+
+    <h2>📬 Đăng ký tư vấn</h2>
+    <form class="form">
+      <input type="text" placeholder="Họ tên">
+      <input type="tel" placeholder="Số điện thoại">
+      <select>
+        <option value="">Chọn nhu cầu</option>
+        <option value="moi">Làm hộ chiếu mới</option>
+        <option value="giahan">Gia hạn hộ chiếu</option>
+        <option value="captoc">Làm hộ chiếu cấp tốc</option>
+      </select>
+      <button type="submit">GỬI THÔNG TIN</button>
+    </form>
 
     <div class="tracuu">
       <h2>🔍 Tra cứu hồ sơ</h2>
@@ -67,11 +223,49 @@
         <button>TRA CỨU NGAY</button>
       </a>
     </div>
+  </div>
 
-    <div class="map">
-      <h2>📍 Văn phòng Mr Thái</h2>
-      <iframe src="https://www.google.com/maps?q=B4+Ph%E1%BA%A1m+Ng%E1%BB%8Dc+Th%E1%BA%A1ch,+Kim+Li%C3%AAn,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i&output=embed"></iframe>
+  <div class="feedback-section">
+    <h2>💬 Khách hàng nói gì về Mr Thái?</h2>
+    <div class="feedback">
+      <img src="https://i.ibb.co/QXsgrwK/feedback1.jpg" alt="Khách hàng 1">
+      <p><strong>Khách hàng Đ.Q:</strong> “E đã nhận được hộ chiếu, cảm ơn a đã hỗ trợ ạ. Oki a tốt quá.”</p>
     </div>
+    <div class="feedback">
+      <img src="https://i.ibb.co/bK9GvG3/feedback2.jpg" alt="Khách hàng 2">
+      <p><strong>Khách hàng B.H:</strong> “Dịch vụ nhanh chóng, nhiệt tình. Chị cảm ơn em nhiều nhé!”</p>
+    </div>
+    <div class="feedback">
+      <img src="https://i.ibb.co/qjMGjWP/feedback3.jpg" alt="Khách hàng 3">
+      <p><strong>Khách hàng C.T:</strong> “Cảm ơn em và đội ngũ bên công ty Tùng nhiều nhé!”</p>
+    </div>
+  </div>
+
+  <div class="feedback-slider">
+    <img src="https://i.ibb.co/WkV0tQ3/fb1.jpg" alt="Ảnh feedback 1">
+    <img src="https://i.ibb.co/g4k6pLv/fb2.jpg" alt="Ảnh feedback 2">
+    <img src="https://i.ibb.co/2jFLb7v/fb3.jpg" alt="Ảnh feedback 3">
+  </div>
+
+  <div class="faq-section">
+    <h2>❓ Câu hỏi thường gặp</h2>
+    <div class="faq-item">
+      <strong>Câu hỏi 1:</strong>
+      <p></p>
+    </div>
+    <div class="faq-item">
+      <strong>Câu hỏi 2:</strong>
+      <p></p>
+    </div>
+    <div class="faq-item">
+      <strong>Câu hỏi 3:</strong>
+      <p></p>
+    </div>
+  </div>
+
+  <div class="map">
+    <h2>📍 Văn phòng Mr Thái</h2>
+    <iframe src="https://www.google.com/maps?q=B4+Ph%E1%BA%A1m+Ng%E1%BB%8Dc+Th%E1%BA%A1ch,+Kim+Li%C3%AAn,+%C4%90%E1%BB%91ng+%C4%90a,+H%C3%A0+N%E1%BB%99i&output=embed"></iframe>
   </div>
 
   <a class="floating-button call-btn" href="tel:0828859889">📞</a>
